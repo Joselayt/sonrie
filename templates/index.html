@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorte</title>
+</head>
+<body>
+    <h1>Dame tu foto y te diré quien eres 😂</h1>
+    <form action="/procesar" method="POST" enctype="multipart/form-data">
+        <input type="file" name="foto">
+        <button type="submit">Enviar al servidor</button>
+    </form>
+
+    {% if resultado %}
+        <img src="data:image/png;base64, {{ resultado['foto'] }}">
+        <h3>Haber haber .....</h3>
+        <p>{{ resultado['sonrisa'] }}</p>
+        <p>{{ resultado['conclu'] }}</p>
+
+        {% endif %}
+    
+</body>
+</html>
+
+<style>
+    img {
+        width: 300px;
+        height: 300px;
+        margin-bottom: auto;
+    }
+
+    button {
+        background-color: brown;
+        color: bisque;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        align-self: center;
+        width: 100px;
+    }
+
+    input {
+        color: brown;
+        background-color: beige;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    body {
+        background-color: cadetblue;
+    }
+</style>
