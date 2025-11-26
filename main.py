@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request
+from flask_cors import CORS
 import cv2
 import numpy as np
 import base64
 
 
 app= Flask(__name__)
+CORS(app, origin="*")
 
 
 def perspective(puntos):
