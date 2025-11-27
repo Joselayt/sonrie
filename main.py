@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from flask_cors import CORS
 import cv2
-import os
 import numpy as np
 import base64
 

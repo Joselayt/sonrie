@@ -1,5 +1,7 @@
 service: sonrie
-fraworkVersion: "3"
+
+org: joselayt
+app: sonrie
 
 provider:
   name: aws
@@ -13,7 +15,6 @@ functions:
 
 plugins:
   - serverless-wsgi
-  - serverless-python-requirements
 
 custom:
   wsgi:
